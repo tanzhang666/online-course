@@ -1,0 +1,23 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /system
+spring:
+  application:
+    name: system
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      additional-exclude: WEB-INF/**
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhsot:3306/course
+    username: root
+    password: 123456
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
